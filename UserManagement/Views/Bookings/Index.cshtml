@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<Bookings>
+
+    <h1 style="text-align: center;">Booking Details</h1>
+
+    <div class="breadcrumb">
+      
+        <div class="d-grid gap-2 col-4 mx-auto">
+            <a href="Passengers/Add" class="btn btn-primary" role="button" data-bs-toggle="button">Book Flight</a>
+         
+        </div>
+        <style>
+
+            .table-with-borders {
+                text-align: center;
+                border-collapse;
+            }
+
+            .table-with-spacing {
+                text-align: center;
+                margin: 20px;
+            }
+
+                .table-with-spacing th {
+                    text-align: center;
+                    border: 2px solid #000;
+                    padding: 8px;
+                }
+
+                .table-with-spacing td {
+                    border: 2px solid #000;
+                    text-align: center;
+                    padding: 10px;
+                }
+        </style>
+        <table class="table-with-spacing table-with-borders">
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Flight ID</th>
+                    <th>Passenger ID</th>
+                    <th>Booking Date</th>
+                    <th>Seat Number </th>
+                    <th>Booking Status </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bookings in Model)
+                {
+                    <tr>
+                        <td>@bookings.BookingID</td>
+                        <td>@bookings.FlightID</td>
+                        <td>@bookings.PassengerID</td>
+                        <td>@bookings.BookingDate</td>
+                        <td>@bookings.SeatNumber</td>
+                        <td>@bookings.BookingStatus</td>
+                      
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>

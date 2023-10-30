@@ -1,0 +1,40 @@
+﻿@model UserManagement.Models.Passengers
+@{
+    ViewData["Title"] = "Add";
+}
+
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="PassengerID" class="form-label">Passenger ID</label>
+        <input type="text" class="form-control" id="PassengerID" asp-for="PassengerID">
+
+    </div>
+    <div class="mb-3">
+        <label for="FirstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="FirstName" asp-for="FirstName">
+    </div>
+    <div class="mb-3">
+        <label for="LastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="LastName" asp-for="LastName">
+
+    </div>
+    <div class="mb-3">
+        <label for="DateOfBirth" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" id="DateOfBirth" asp-for="DateOfBirth">
+
+    </div>
+    <div class="mb-3">
+        <label for="PassportID" class="form-label">Passport ID</label>
+        <input type="text" class="form-control" id="PassportID" asp-for="PassportID">
+
+    </div>
+    <div class="mb-3">
+        <label for="ContactInformation" class="form-label">Email Address & Phone Number </label>
+        <input type="text" class="form-control" id="ContactInformation" asp-for="ContactInformation">
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
